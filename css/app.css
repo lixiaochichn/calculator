@@ -5,23 +5,25 @@ box-sizing: border-box;
 }
 body {
   height: 100vh;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #394965;
   font-family: Helvetica, Tahoma, Arial, STXihei, “华文细黑”, Heiti, “黑体”, “Microsoft YaHei”, “微软雅黑”, SimSun, “宋体”, sans-serif;
-  
+  overflow: hidden;
 }
 
 .calculator {
-  cursor: pointer;
   width: 320px;
-  height: 90vh;
+  height: 568px;
   background-color: #fff;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  min-height: 500px;
+  min-height: 568px;
+  /*cursor: pointer; */
+  outline:none;   
 }
 .header {
   flex-grow: 1;
@@ -59,6 +61,7 @@ body {
   align-items: center;
   justify-content: center;
   color: #77858f;
+  
 }
 
 
@@ -70,6 +73,7 @@ body {
   justify-content: center;
   border-radius: 50%;
   transition: .1s;/*表示时间*/
+  
 }
 .arithmetic >.circular {
   color: #84c8ff;
@@ -102,9 +106,9 @@ body {
 }
 
 .num:active >.circular, .arithmetic:active >.circular {
-  font-size: 32px;
-  width: 69.3%;
-  height: 69.3%;
+  font-size: 22px;
+  width: 71.5%;
+  height: 71.5%;
 }
 .num:hover >.circular, .arithmetic:hover >.circular {
   box-shadow: 6px 14px 40px -5px #58b3ff;
