@@ -80,7 +80,7 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  transition: .1s;/*表示时间*/
+  transition: .05s;/*表示时间*/
   
 }
 .arithmetic >.circular {
@@ -140,18 +140,37 @@ body {
     body {
         background-color: #fff;
         width: 100vw;
+        transition: .2s;
     }
     .main, .calculator {
       border-radius: 0;
       width: 100%;
+      transition: .2s;
     }
 
 }
-/*@media screen and (max-height: 769px) {
-    body {
+@media screen and (orientation: landscape) and (max-height: 413px){
+      /*body {
         background-color: #fff;
-    }
-    .calculator {
-      border-radius: 0;
-    }
-}*/
+        width: 100vw;
+        transition: .5s;
+    }*/
+
+  .num, .arithmetic{
+  width: 40px;
+  height: 40px;
+}
+.calculator {
+  width: 160px;
+  height: 320px;
+}
+.formula {
+  font-size: 20px;
+}
+.result {
+  font-size: 35px;
+}
+.header {
+  margin: 5px 10px;
+}
+}
