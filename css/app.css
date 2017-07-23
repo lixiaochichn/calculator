@@ -2,6 +2,7 @@
 margin: 0;
 padding: 0;
 box-sizing: border-box;
+  transition: 5s;
 }
 body {
   height: 100vh;
@@ -17,6 +18,8 @@ body {
 
 .calculator {
   width: 320px;
+  max-width: 320px;
+  
   height: 568px;
   background-color: #fff;
   border-radius: 5px;
@@ -135,10 +138,8 @@ body {
   box-shadow: 6px 14px 40px -5px #58b3ff;
 }
 
-@media screen and (max-width: 413px) {
-  * {
-  transition: .5s;
-}
+@media screen and (orientation: portrait) and (max-width: 401px) {
+
     body {
         background-color: #fff;
         width: 100vw;
@@ -147,25 +148,20 @@ body {
     .main, .calculator {
       border-radius: 0;
       width: 100%;
+      max-width: 100%;
 
     }
 
 }
 @media screen and (orientation: landscape) and (max-height: 413px){
-      /*body {
-        background-color: #fff;
-        width: 100vw;
-        transition: .5s;
-    }*/
-* {
-  transition: .5s;
-}
+
   .num, .arithmetic{
   width: 48px;
   height: 48px;
 }
 .calculator {
   width: 200px;
+  max-width: 200px;
   height: 320px;
 }
 .formula {
