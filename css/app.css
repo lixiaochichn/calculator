@@ -12,6 +12,7 @@ body {
   background-color: #394965;
   font-family: Helvetica, Tahoma, Arial, STXihei, “华文细黑”, Heiti, “黑体”, “Microsoft YaHei”, “微软雅黑”, SimSun, “宋体”, sans-serif;
   overflow: hidden;
+  user-select: none;
 }
 
 .calculator {
@@ -109,7 +110,9 @@ body {
   font-size: 22px;
   width: 71.5%;
   height: 71.5%;
+  box-shadow: 6px 14px 40px -5px #58b3ff;
 }
+@media screen and (min-width: 1025px) {
 .num:hover >.circular, .arithmetic:hover >.circular {
   box-shadow: 6px 14px 40px -5px #58b3ff;
 }
@@ -118,10 +121,12 @@ body {
   box-shadow: 6px 14px 50px 0px #58b3ff;
   
 }
+}
 .equal:active {
   font-size: 32px;  
   width: 85.3%;
   height: 58.7%;
+  box-shadow: 6px 14px 40px -5px #58b3ff;
 }
 
 @media screen and (max-width: 413px) {
