@@ -22,7 +22,6 @@ body {
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  min-height: 568px;
   /*cursor: pointer; */
   outline:none;   
 }
@@ -137,15 +136,18 @@ body {
 }
 
 @media screen and (max-width: 413px) {
+  * {
+  transition: .5s;
+}
     body {
         background-color: #fff;
         width: 100vw;
-        transition: .2s;
+
     }
     .main, .calculator {
       border-radius: 0;
       width: 100%;
-      transition: .2s;
+
     }
 
 }
@@ -155,13 +157,15 @@ body {
         width: 100vw;
         transition: .5s;
     }*/
-
+* {
+  transition: .5s;
+}
   .num, .arithmetic{
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
 }
 .calculator {
-  width: 160px;
+  width: 192px;
   height: 320px;
 }
 .formula {
@@ -172,5 +176,6 @@ body {
 }
 .header {
   margin: 5px 10px;
+
 }
 }
