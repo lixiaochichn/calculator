@@ -59,6 +59,7 @@ body {
   /*max-width: 320px;*/
   display: flex;
   flex-wrap: wrap;
+  
 }
 
 
@@ -142,7 +143,7 @@ body {
   box-shadow: 6px 14px 40px -5px #58b3ff;
 }
 
-@media screen and (orientation: portrait) and (max-width: 415px) {
+/*@media screen and (orientation: portrait) and (max-width: 415px) {
 
     body {
         background-color: #fff;
@@ -155,7 +156,7 @@ body {
     }
 
 
-}
+}*/
 @media screen and (max-height: 580px){
    /*and (orientation: landscape) */
 
