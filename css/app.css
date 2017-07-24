@@ -2,8 +2,9 @@
 margin: 0;
 padding: 0;
 box-sizing: border-box;
-  transition: 5s;
+  transition: .4s;
 }
+
 body {
   height: 100vh;
   width: 100vw;
@@ -124,8 +125,11 @@ body {
 @media screen and (min-width: 1025px) {
 .num:hover >.circular, .arithmetic:hover >.circular {
   box-shadow: 6px 14px 40px -5px #58b3ff;
+  
 }
-
+.calculator {
+  cursor: pointer; 
+}
 .equal:hover {
   box-shadow: 6px 14px 50px 0px #58b3ff;
   
@@ -137,8 +141,8 @@ body {
   height: 58.7%;
   box-shadow: 6px 14px 40px -5px #58b3ff;
 }
-
-@media screen and (orientation: portrait) and (max-width: 401px) {
+/*
+@media screen and (orientation: portrait) and (max-width: 361px) {
 
     body {
         background-color: #fff;
@@ -148,12 +152,12 @@ body {
     .main, .calculator {
       border-radius: 0;
       width: 100%;
-      max-width: 100%;
-
     }
 
-}
-@media screen and (orientation: landscape) and (max-height: 413px){
+
+}*/
+@media screen and (max-height: 580px){
+   /*and (orientation: landscape) */
 
   .num, .arithmetic{
   width: 48px;
