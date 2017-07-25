@@ -2,7 +2,7 @@
 margin: 0;
 padding: 0;
 box-sizing: border-box;
-  transition: .1s;
+  transition: .01s;
 }
 
 body {
@@ -87,7 +87,6 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  transition: .05s;/*表示时间*/
   
 }
 .arithmetic >.circular {
@@ -116,7 +115,7 @@ body {
   font-size: 30px;
   color: #fff;
   box-shadow: 0 8px 50px -4px #58b3ff;
-  transition: .1s;/*表示时间*/
+
   
 }
 
@@ -164,7 +163,7 @@ body {
      width: 320px;
     }
 }
-@media screen and (max-height: 567px){
+@media screen and (max-height: 567px) {
 
   /*body {
     background-color: black;
@@ -174,7 +173,7 @@ body {
   width: 48px;
   height: 48px;
 }
-.keyborder {
+.keyborder, .header {
   width: 200px;
 }
 .calculator {
@@ -190,6 +189,10 @@ body {
     .main {
       width: inherit;
     }
+    .equal {
+  width: 60%;
+
+}
     /*.main {
 
       width: 100vw;
@@ -199,4 +202,10 @@ body {
   margin: 5px 10px;
 
 }*/
+}
+
+@media screen and (max-height: 567px) and (min-width: 416px) {
+  .calculator {
+    width: 200px;
+    }
 }
