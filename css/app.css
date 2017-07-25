@@ -2,7 +2,7 @@
 margin: 0;
 padding: 0;
 box-sizing: border-box;
-  transition: .4s;
+  transition: .1s;
 }
 
 body {
@@ -26,6 +26,8 @@ body {
   border-radius: 5px;
   display: flex;
   flex-direction: column;
+    justify-content: center;
+  align-items: center;
   /*cursor: pointer; */
   outline:none;   
 }
@@ -33,10 +35,11 @@ body {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  /*background-color: #fff;*/
+  /*background-color: black;*/
   justify-content: flex-end;
   align-items: flex-end;
-  margin: 10px 20px;
+  padding: 10px 20px;
+  width: 100%;
   
 }
 .formula {
@@ -142,41 +145,58 @@ body {
   height: 58.7%;
   box-shadow: 6px 14px 40px -5px #58b3ff;
 }
-
-/*@media screen and (orientation: portrait) and (max-width: 415px) {
+/*and (orientation: portrait) */
+@media screen and (max-width: 415px) {
 
     body {
         background-color: #fff;
         width: 100vw;
-
     }
-    .main, .calculator {
+    .calculator {
       border-radius: 0;
       width: 100vw;
     }
+    .main {
+      width: 100vw;
+    }
 
+    .keyborder{
+     width: 320px;
+    }
+}
+@media screen and (max-height: 567px){
 
-}*/
-@media screen and (max-height: 580px){
-   /*and (orientation: landscape) */
+  /*body {
+    background-color: black;
+  }*/
 
-  .num, .arithmetic{
+.num, .arithmetic{
   width: 48px;
   height: 48px;
 }
-.calculator {
+.keyborder {
   width: 200px;
-  max-width: 200px;
+}
+.calculator {
+
   height: 320px;
 }
 .formula {
   font-size: 20px;
 }
 .result {
-  font-size: 35px;
+  font-size: 30px;
 }
+    .main {
+      width: inherit;
+    }
+    /*.main {
+
+      width: 100vw;
+    }
+
 .header {
   margin: 5px 10px;
 
-}
+}*/
 }
