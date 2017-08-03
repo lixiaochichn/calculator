@@ -1,6 +1,7 @@
 
 (function () {
-
+  const resultscale = 1 - 0.06 * 2;
+  console.log(resultscale);
   $formula = document.querySelector('.formula');
   $result = document.querySelector('.result');
 
@@ -15,14 +16,20 @@
   $clear = document.querySelector('.num.clear');
   $header = document.querySelector('.header');
 
+
+
+
+
   function setresult(value) {
     expr = String(value);
     $result.innerText = expr;
+    resize();
   };
 
   function setformula(value) {
     exprf = String(value);
     $formula.innerText = exprf;
+    resizeformula();
   };
   let expr = '0';
   let exprf = '';
@@ -110,16 +117,33 @@
       expr = eval(expr);
     }
     if (String(eval(expr) - eval(expr).toFixed(0)).length > 8) expr = eval(expr).toFixed(6);
-  
+
     setresult(expr);
     setformula(exprf);
     ready = 1;
   });
 
-  function resize() {
-    let maxWidth = $resullt.clientWidth;
-    if($resullt.scrollWidth > maxWidth){$resullt.style.tranform = 'scale(${maxWidth / $resullt.scrollWidth})'};
-  }
 
+
+  function resize() {
+    let maxWidth = $header.clientWidth * resultscale;
+    if ($result.scrollWidth > maxWidth) {
+      $result.style.transform = `scale(${maxWidth / $result.scrollWidth})`;
+      $result.style.transformOrigin = 'right center';
+    } else {
+      $result.style.transform = `scale(1)`;
+    }
+  };
+
+
+  function resizeformula() {
+    let maxWidth = $header.clientWidth * resultscale;
+    if ($formula.scrollWidth > maxWidth) {
+      $formula.style.transform = `scale(${maxWidth / $formula.scrollWidth})`;
+      $formula.style.transformOrigin = 'right center';
+    } else {
+      $formula.style.transform = `scale(1)`;
+    }
+  };
 
 })();
